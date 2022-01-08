@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.text {
+    font-size: 100px;
+    font-family: 'AdigianaUltra', cursive;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@font-face {
+    font-family: "AdigianaUltra";
+    src: url("../font/AdigianaUltra.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.btn:focus, .btn:active, .btn:focus-within, .btn:focus-visible, .btn:visited, label {
+    outline: none !important;
+    box-shadow: none !important;
+}

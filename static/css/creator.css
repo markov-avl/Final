@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: white;
+}
+
+.container__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#textAbove {
+    font-family: 'AdigianaUltra', cursive;
+    font-size: 70px;
+    margin: 20px 0;
+}
+
+.beer__creator {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.beer__visualizer {
+    display: flex;
+    width: 100%;
+    height: 768px;
+    margin-bottom: 10px;
+}
+
+.arrow {
+    width: 100%;
+    height: 150px;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.text__center {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.right > .arrow {
+    transform: rotate(180deg);
+}
+
+.visualizer {
+    display: flex;
+    width: 100%;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.counter__viewer {
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.counter__control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter__control > * {
+    width: 45px;
+    height: 45px;
+}
+
+.viewer {
+    display: flex;
+    width: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__viewer {
+    padding: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+}
+
+.bottle__layer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 170px;
+}
+
+.sticker__layer {
+    position: absolute;
+    top: 350px;
+    left: 45px;
+    width: 140px;
+}
+
+.taste__viewer {
+    width: 100%;
+    height: 100px;
+    font-size: 30px;
+}
+
+.remover {
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+.remover > button {
+    width: 100px;
+}
+
+.remover > button:hover > svg {
+    fill: white;
+}
+
+.parameters {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+}
+
+.parameters > * {
+    width: 32%;
+}
+
+.btn:focus, .btn:active, .btn:focus-within, .btn:focus-visible, .btn:visited, label {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#beerAdder {
+    font-size: 60px;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+#pay {
+    font-size: 30px;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 80px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #39b54a;
+    color: white;
+    width: 100vw;
+    height: 60px;
+}
+
+#footerText {
+    font-size: 20px;
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+@font-face {
+    font-family: "AdigianaUltra";
+    src: url("../font/AdigianaUltra.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

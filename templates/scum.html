@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата</title>
+    <link rel="stylesheet" href="static/css/scum.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="left border">
+                        <div class="row">
+                            <span class="header">Оплата</span>
+                            <div class="icons">
+                                <img src="https://img.icons8.com/color/48/000000/visa.png" alt="">
+                                <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="">
+                                <img src="https://img.icons8.com/color/48/000000/mir.png" alt="">
+                            </div>
+                        </div>
+                        <form>
+                            <span>Имя владельца карты:</span>
+                            <input class="cardholder" id="cardholder" placeholder="IVAN IVANOV">
+                            <span>Номер карты:</span>
+                            <input class="card__number" id="cardNumber" placeholder="0125 6780 4567 9909">
+                            <span>Срок действия:</span>
+                            <input class="expiry" id="expiry" placeholder="ММ/ГГ">
+                            <span>CVV:</span>
+                            <input class="cvv" id="cvv">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="right border">
+                        <div class="header">Заказ</div>
+                        <p>{{data|length}} товара</p>
+                        {% for beer in data %}
+                            <div class="beerItem">
+                                <div class="beerImage">
+                                    <img class="bottle" src="static/img/bottle-{{beer.bottle}}.png" alt="">
+                                    {% if beer.sticker >= 0 %}
+                                        <img class="sticker" src="static/img/sticker-{{beer.sticker}}.png" alt="">
+                                    {% endif %}
+                                </div>
+                                <div class="info">
+                                    <div class="beerPrice"><b>{{beer.price}} руб.</b></div>
+                                    <div class="beerTaste text-muted">{{beer.taste}} x {{beer.count}}</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <hr>
+                        <div class="row lower">
+                            <div class="col text-left"><b>К оплате</b></div>
+                            <div class="col text-right"><b>{{sum}} руб.</b></div>
+                        </div>
+                        <button id="placeOrder" class="btn btn-lg btn-outline-primary">Разместить заказ</button>
+                        <p class="text-muted text-center">Бесплатная доставка</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="static/js/scum.js"></script>
+    <script>
+const host = "{{host}}"
+const session = "{{session}}"
+    </script>
+</body>
+</html>
